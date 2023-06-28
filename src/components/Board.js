@@ -1,14 +1,23 @@
 import React from 'react'
-import CardList from './CardList'
+import PropTypes from 'prop-types';
 
-function Board() {
+const Board = ({ board, onBoardSelect }) => {
   return (
-      <div>
-          <h1>Hello I am Board</h1>
-          <CardList/>
-      
+    <div onClick={() => onBoardSelect(board)}>
+      {board.title}
     </div>
-  )
-}
+  );
+};
+
+Board.propTypes = {
+  board: PropTypes.object(
+    PropTypes.shape({
+      board_id: PropTypes.number.isRequired,
+      owner: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  onBoardSelect: PropTypes.func.isRequired
+};
 
 export default Board
