@@ -44,8 +44,8 @@ function App() {
       .then(() => {
         getBoards();
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
         alert('Unable to create a new board.');
       });
   };
