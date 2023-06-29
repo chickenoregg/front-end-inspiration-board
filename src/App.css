@@ -18,6 +18,8 @@ header{
   background-image: url('./images/background.png');
   background-size: cover;
   border-radius: 20px;
+  font-family:'Courier New', Courier, monospace;
+
 
   
 
@@ -30,10 +32,11 @@ header.h1{
 
 h2{
   text-align: center;
+  font-family:'Courier New', Courier, monospace;
+
 }
 
 h1, h2 {
-  font-family:'Courier New', Courier, monospace;
   padding: 0.6rem 1em;
   
   
@@ -46,7 +49,10 @@ li:hover {
 .boards__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+  
 }
+
 
 .boards__list {
   max-height: 20rem;
@@ -54,9 +60,13 @@ li:hover {
   margin-right: 2rem;
   /* border: black solid 1px; */
   font-family:'Courier New', Courier, monospace;
-
-  
+  /* border: 2px solid lawngreen; */
+  padding: 10px;
+  margin-left: 20px;
+  font-size: x-large;
 }
+
+
 
 .new-board-form__container,
 .new-card-form__container {
@@ -64,6 +74,8 @@ li:hover {
   flex-direction: column;
   align-items: flex-start;
   /* background: linear-gradient(to top,  rgb(182, 49, 231), rgb(37, 187, 206) ); */
+  font-family:'Courier New', Courier, monospace;
+
 }
 
 .new-board-form__form,
@@ -75,6 +87,7 @@ li:hover {
   border: solid rgb(125, 189, 23);
   padding: 30px;
   margin-left: 25px;
+  
 
 }
 
@@ -87,6 +100,7 @@ li:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 
+
 }
 
 .submit_board{
@@ -98,6 +112,8 @@ li:hover {
 
 .selected_board{
   text-align: center;
+  font-family:'Courier New', Courier, monospace;
+
 
 }
 .cards__container {
@@ -122,6 +138,8 @@ li:hover {
   /* background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(191, 171, 212)); */
   background-color: rgb(152, 235, 100);
   border-radius: 10px;
+  font-family:'Courier New', Courier, monospace;
+
   
 }
 

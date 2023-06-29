@@ -4,6 +4,8 @@ import axios from 'axios';
 import BoardList from './components/BoardList';
 import CardList from './components/CardList';
 import BoardForm from './components/BoardForm';
+
+// added for our gif
 import image from './images/giphy.gif'
 
 const API = process.env.REACT_APP_BACKEND_URL;
@@ -61,18 +63,18 @@ function App() {
           <section>
             <h2>Boards</h2>
             <ul className="boards__list">
-              <BoardList boards={boardsData} onBoardSelect={selectBoard} />
+                <BoardList boards={boardsData} onBoardSelect={selectBoard} />
             </ul>
           </section>
           <section>
             <h2>Selected Board</h2>
-            <p className='selected_board'>
+            <p className="selected_board">
               {selectedBoard.board_id
                 ? `${selectedBoard.title} - ${selectedBoard.owner}`
                 : "Select a board from the board list!"}
             </p>
             <p>
-              <img src={image} alt="gif people"/>
+              <img src={image} alt="gif people" />
             </p>
           </section>
           <section className="new-board-form__container">
