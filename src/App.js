@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <header>Inspiration Board</header>
+        <h1>Inspiration Board</h1>
         <section className='boards__container'>
           <section>
             <h2>Boards</h2>
@@ -70,7 +70,7 @@ function App() {
               {selectedBoard.board_id ? `${selectedBoard.title} - ${selectedBoard.owner}` : 'Select a board from the board list!'}
             </p>
           </section>
-          <section>
+          <section className='new-board-form__container'>
             <h2>Make a New Board!</h2>
             <BoardForm addBoard={postBoard} />
           </section>
