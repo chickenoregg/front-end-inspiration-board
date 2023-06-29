@@ -3,20 +3,16 @@ import PropTypes from 'prop-types';
 import Board from './Board';
 
 const BoardList = ({ boards, onBoardSelect }) => {
-	const boardsElements = boards.map(board => {
+	return boards.map((board) => {
 		return (
-			<li>
-				<Board
-					board={board}
-					onBoardSelect={onBoardSelect}
-				/>
-			</li>
+      <li key={board.board_id}>
+        <Board
+          board={board}
+          onBoardSelect={onBoardSelect}
+        />
+      </li>
 		);
 	});
-
-	return (
-		<ol>{boardsElements}</ol>
-	);
 };
 
 BoardList.propTypes = {
