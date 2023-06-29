@@ -50,9 +50,11 @@ function App() {
         </section>
         <section>
           <h2>Selected Board</h2>
-          <p>Select a board from the board list!</p>
+          <p>
+            {selectedBoard.board_id ? `${selectedBoard.title} - ${selectedBoard.owner}` : 'Select a board from the board list!'}
+          </p>
         </section>
-        <CardList/>
+        {selectedBoard.board_id ? <CardList selectedBoardId={selectedBoard.board_id} /> : ''}
       </main>
     </div>
   );
