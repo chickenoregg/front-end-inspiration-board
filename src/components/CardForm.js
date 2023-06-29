@@ -24,19 +24,23 @@ const CardForm = ({ addCard }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="message">Message</label>
-      <input
-        required
-        type="text"
-        id="message"
-        name="message"
-        value={cardData.message}
-        onChange={handleChange}
-      />
-      <input type="submit" value="submit" />
-    </form>
-  )
+    <section className='new-card-form__container'>
+      <h2>Make a New Card!</h2>
+      <form onSubmit={handleSubmit} className='new-card-form__form'>
+        <label htmlFor="message">Message</label>
+        <input
+          required
+          type="text"
+          id="message"
+          name="message"
+          value={cardData.message}
+          onChange={handleChange}
+        />
+        <p>Preview: {cardData.message}</p>
+        <input type="submit" value="submit" />
+      </form>
+    </section>
+  );
 };
 
 CardForm.propTypes = {
