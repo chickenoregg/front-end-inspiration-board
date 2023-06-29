@@ -43,7 +43,10 @@ h1, h2 {
 }
 
 li:hover {
-  text-decoration: underline;
+  background-color: lawngreen;
+  color:  rgb(141, 51, 238)
+  
+  
 }
 
 .boards__container {

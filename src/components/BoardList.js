@@ -7,7 +7,8 @@ const BoardList = ({ boards, onBoardSelect }) => {
 		return (
       <li key={board.board_id}>
         <Board
-          board={board}
+					board={board}
+					className="board_item"
           onBoardSelect={onBoardSelect}
         />
       </li>
