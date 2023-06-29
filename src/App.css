@@ -19,16 +19,24 @@ header{
   background-size: cover;
   border-radius: 20px;
 
+  
+
 }
 
 header.h1{
+  
 
+}
+
+h2{
+  text-align: center;
 }
 
 h1, h2 {
   font-family:Georgia, 'Times New Roman', Times, serif;
   padding: 0.6rem 1em;
-  display: inline-block;
+  
+  
 }
 
 li:hover {
@@ -41,8 +49,7 @@ li:hover {
 }
 
 .boards__list {
-  max-height: 9rem;
-  min-height: 9rem;
+  max-height: 20rem;
   overflow: scroll;
   margin-right: 2rem;
   border: black solid 1px;
@@ -53,7 +60,7 @@ li:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: linear-gradient(to bottom,  rgb(59, 61, 54), rgb(228, 139, 228) );
+  /* background: linear-gradient(to top,  rgb(182, 49, 231), rgb(37, 187, 206) ); */
 }
 
 .new-board-form__form,
@@ -62,8 +69,10 @@ li:hover {
   flex-direction: column;
   margin-bottom: 2em;
   width: 75%;
-  border: solid black;
+  border: solid rgb(125, 189, 23);
   padding: 30px;
+  margin-left: 25px;
+
 }
 
 .new-board-form__form input,
@@ -83,6 +92,10 @@ li:hover {
 
 }
 
+.selected_board{
+  text-align: center;
+
+}
 .cards__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -102,7 +115,8 @@ li:hover {
   justify-content: center;
   padding: 2rem;
   flex-direction: column;
-  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(228, 139, 228));
+  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(191, 171, 212));
+  background-color: lawngreen;
   border-radius: 10px;
   
 }
@@ -126,7 +140,7 @@ li:hover {
 }
 
 .card_message{
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
 
 }
@@ -139,6 +153,5 @@ li:hover {
 .submit_card{
   margin-top: 20px;
   padding: 10px;
-  border-radius: 40px;
 
 }
