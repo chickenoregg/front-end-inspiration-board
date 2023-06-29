@@ -60,9 +60,9 @@ function App() {
         <section className="boards__container">
           <section>
             <h2>Boards</h2>
-            <ol className="boards__list">
+            <ul className="boards__list">
               <BoardList boards={boardsData} onBoardSelect={selectBoard} />
-            </ol>
+            </ul>
           </section>
           <section>
             <h2>Selected Board</h2>
@@ -72,7 +72,7 @@ function App() {
                 : "Select a board from the board list!"}
             </p>
             <p>
-              <img src={image}/>
+              <img src={image} alt="gif people"/>
             </p>
           </section>
           <section className="new-board-form__container">

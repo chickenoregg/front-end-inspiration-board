@@ -33,7 +33,7 @@ h2{
 }
 
 h1, h2 {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:'Courier New', Courier, monospace;
   padding: 0.6rem 1em;
   
   
@@ -50,9 +50,12 @@ li:hover {
 
 .boards__list {
   max-height: 20rem;
-  overflow: scroll;
+  /* overflow: scroll; */
   margin-right: 2rem;
-  border: black solid 1px;
+  /* border: black solid 1px; */
+  font-family:'Courier New', Courier, monospace;
+
+  
 }
 
 .new-board-form__container,
@@ -78,7 +81,8 @@ li:hover {
 .new-board-form__form input,
 .new-card-form__form input{
   color: white;
-  background-color: rgb(129, 236, 22);
+  background: linear-gradient(to bottom,  rgb(15,54,94), rgb(141, 51, 238));
+  border: none;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -115,8 +119,8 @@ li:hover {
   justify-content: center;
   padding: 2rem;
   flex-direction: column;
-  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(191, 171, 212));
-  background-color: lawngreen;
+  /* background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(191, 171, 212)); */
+  background-color: rgb(152, 235, 100);
   border-radius: 10px;
   
 }
@@ -154,4 +158,13 @@ li:hover {
   margin-top: 20px;
   padding: 10px;
 
+}
+
+.delete{
+  font-size: x-large;
+ 
+}
+
+.like_count, .like_add{
+  margin-top: 7px;
 }

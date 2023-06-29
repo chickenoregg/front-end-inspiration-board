@@ -6,11 +6,17 @@ const Card = ({ card, increaseCardLikes, deleteCard }) => {
     <div className="card-item">
       <p className="card_message">{card.message}</p>
       <ul className="card-item__controls">
-        <li>{card.likes_count} 👍</li>
-        <li onClick={() => increaseCardLikes(card)}>+1 👍</li>
-        <li className="card-item__delete" onClick={() => deleteCard(card)}>
-          Delete
-        </li>
+        <div className="like_count">
+          <li>{card.likes_count} 👍</li>
+        </div>
+        <div className="like_add">
+          <li onClick={() => increaseCardLikes(card)}>+1 👍</li>
+        </div>
+        <div className="delete">
+          <li className="card-item__delete" onClick={() => deleteCard(card)}>
+            🆇
+          </li>
+        </div>
       </ul>
     </div>
   );
