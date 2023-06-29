@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Card from './Card'
 import CardForm from './CardForm';
 import PropTypes from 'prop-types';
@@ -9,7 +9,7 @@ const API = process.env.REACT_APP_BACKEND_URL;
 const CardList = ({ board }) => {
   const [cardsData, setCardsData] = useState([]);
 
-  useEffect(() => {
+  const getCards = () => {
     axios
       .get(`${API}/boards/${board.board_id}/cards`)
       .then((response) => {
@@ -19,7 +19,11 @@ const CardList = ({ board }) => {
         console.log('Error:', error);
         alert('Unable to retrieve cards for this board.');
       });
-  }, [board]);
+  };
+
+  useEffect(() => {
+    getCards();
+  });
 
   const increaseCardLikes = (newCard) => {
     axios
@@ -39,13 +43,11 @@ const CardList = ({ board }) => {
       });
   };
 
-  const postCard = (message) => {
+  const postCard = (newCard) => {
     axios
-      .post(`${API}/boards/${board.board_id}/cards`, {message})
-      .then((response) => {
-        const cards = [...cardsData];
-        cards.push(response.data.card);
-        setCardsData(cards);
+      .post(`${API}/boards/${board.board_id}/cards`, newCard)
+      .then(() => {
+        getCards();
       })
       .catch((error) => {
         console.log('Error:', error);
@@ -55,12 +57,9 @@ const CardList = ({ board }) => {
 
   const deleteCard = (card) => {
     axios
-      .delete(`${API}/cards/${card.board_id}`)
-      .then((response) => {
-        const newCardsData = cardsData.filter((existingCard) => {
-          return existingCard.card_id !== card.card_id;
-        });
-        setCardsData(newCardsData);
+      .delete(`${API}/cards/${card.card_id}`)
+      .then(() => {
+        getCards();
       })
       .catch((error) => {
         console.log('Error:', error);
@@ -71,11 +70,11 @@ const CardList = ({ board }) => {
   return (
     <section className='cards__container'>
       <section>
-        <h2>CardList</h2>
+        <h2>Cards in '{board.title}'</h2>
         <div className='card-items__container'>
           {cardsData.map((card) => (
             <Card
-              key={card.id}
+              key={card.card_id}
               card={card}
               increaseCardLikes={increaseCardLikes}
               deleteCard={deleteCard}
