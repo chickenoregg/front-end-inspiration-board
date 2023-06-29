@@ -196,5 +196,11 @@ li:hover {
   margin-top: 7px;
   border-radius: 50px;
   background-color: aquamarine;
+  font-size: large;
 
+
+}
+
+.like_add{
+  font-size: xx-large;
 }
