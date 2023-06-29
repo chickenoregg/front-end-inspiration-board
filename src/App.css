@@ -44,9 +44,9 @@ h1, h2 {
 
 li:hover {
   background-color: lawngreen;
-  color:  rgb(141, 51, 238)
-  
-  
+  color:  rgb(132,17,252);
+  border-radius: 40%;
+
 }
 
 .boards__container {
@@ -194,4 +194,7 @@ li:hover {
 
 .like_count, .like_add{
   margin-top: 7px;
+  border-radius: 50px;
+  background-color: aquamarine;
+
 }
