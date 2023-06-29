@@ -4,6 +4,7 @@ import axios from 'axios';
 import BoardList from './components/BoardList';
 import CardList from './components/CardList';
 
+const API = process.env.REACT_APP_BACKEND_URL;
 
 const DEFAULT_BOARD_DATA = {
   board_id: null,
@@ -17,7 +18,7 @@ function App() {
 
   const getBoards = () => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/boards`, {})
+      .get(`${API}/boards`, {})
       .then((response) => {
         setBoardsData(response.data);
       })
@@ -37,7 +38,7 @@ function App() {
 
   const createNewBoard = (newBoard) => {
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/boards`)
+      .post(`${API}/boards`)
       .then((response) => {
         const boards = [...boardsData];
         boards.push(response.data.board);
@@ -73,7 +74,7 @@ function App() {
             <h2>Create a New Board</h2>
           </section>
         </section>
-        {selectedBoard.board_id ? <CardList selectedBoardId={selectedBoard.board_id} /> : ''}
+        {selectedBoard.board_id ? <CardList board={selectedBoard} /> : ''}
       </main>
     </div>
   );
