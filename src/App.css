@@ -1,8 +1,21 @@
+*{
+  background-color: rgb(171, 167, 167);
+
+}
+
 body {
   margin: 3rem;
   font-family: 'Open Sans', sans-serif;
-  color: black;
+  border: solid rgb(39, 34, 34);
 }
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 h1, h2 {
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -63,6 +76,7 @@ li:hover {
   justify-content: center;
   padding: 2rem;
   flex-direction: column;
+  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(228, 139, 228))
 }
 
 .card-item__controls {

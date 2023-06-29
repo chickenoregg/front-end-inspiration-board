@@ -53,29 +53,30 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>Inspiration Board</h1>
-        <section className='boards__container'>
+        <header>
+          <h1>Inspiration Board</h1>
+        </header>
+        <section className="boards__container">
           <section>
             <h2>Boards</h2>
-            <ol className='boards__list'>
-              <BoardList
-                boards={boardsData}
-                onBoardSelect={selectBoard}
-              />
+            <ol className="boards__list">
+              <BoardList boards={boardsData} onBoardSelect={selectBoard} />
             </ol>
           </section>
           <section>
             <h2>Selected Board</h2>
             <p>
-              {selectedBoard.board_id ? `${selectedBoard.title} - ${selectedBoard.owner}` : 'Select a board from the board list!'}
+              {selectedBoard.board_id
+                ? `${selectedBoard.title} - ${selectedBoard.owner}`
+                : "Select a board from the board list!"}
             </p>
           </section>
-          <section className='new-board-form__container'>
+          <section className="new-board-form__container">
             <h2>Make a New Board!</h2>
             <BoardForm addBoard={postBoard} />
           </section>
         </section>
-        {selectedBoard.board_id ? <CardList board={selectedBoard} /> : ''}
+        {selectedBoard.board_id ? <CardList board={selectedBoard} /> : ""}
       </main>
     </div>
   );
