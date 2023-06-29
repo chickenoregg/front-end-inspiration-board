@@ -23,8 +23,7 @@ BoardList.propTypes = {
 	boards: PropTypes.arrayOf(PropTypes.shape({
 		board_id: PropTypes.number.isRequired,
 		owner: PropTypes.string.isRequired,
-		title: PropTypes.string.isRequired,
-		cards: PropTypes.array.isRequired
+		title: PropTypes.string.isRequired
 	})),
 	onBoardSelect: PropTypes.func.isRequired
 };
