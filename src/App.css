@@ -11,6 +11,10 @@ h1, h2 {
   color: black;
 }
 
+li:hover {
+  text-decoration: underline;
+}
+
 .boards__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,4 +26,55 @@ h1, h2 {
   overflow: scroll;
   margin-right: 2rem;
   border: black solid 1px;
+}
+
+.new-board-form__container,
+.new-card-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-board-form__form,
+.new-card-form__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  width: 75%;
+}
+
+.cards__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.card-items__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+
+.card-item {
+  background-color: lightpink;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.card-item__controls {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.card-item__message {
+  text-align: center;
+  font-size: 1.4rem;
+  word-break: break-word;
 }
