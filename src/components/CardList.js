@@ -13,7 +13,7 @@ const CardList = ({ selectedBoardId }) => {
           `${process.env.REACT_APP_BACKEND_URL}/boards/${selectedBoardId}/cards`
         )
         .then((response) => {
-          setCardsData(response);
+          setCardsData(response.data);
         })
         .catch((error) => {
           console.log("Error:", error);
