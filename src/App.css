@@ -85,28 +85,41 @@ li:hover {
 }
 
 .card-item {
-  background-color: lightpink;
   min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   flex-direction: column;
-  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(228, 139, 228))
+  background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(228, 139, 228));
 }
 
 .card-item__controls {
   list-style-type: none;
   display: flex;
-  padding: 0;
+  padding: 10px;
   width: 100%;
   justify-content: space-evenly;
+  border-radius: 20px;
+
+
 }
 
 .card-item__message {
   text-align: center;
   font-size: 1.4rem;
   word-break: break-word;
+
 }
 
+.card_message{
+  border-radius: 20px;
+  padding: 20px;
+
+}
+
+.card-item__delete{
+  margin-top: 5px;
+
+}
 

@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 const Card = ({ card, increaseCardLikes, deleteCard }) => {
   return (
-    <div className='card-item'>
-      <p>{card.message}</p>
-      <ul className='card-item__controls'>
+    <div className="card-item">
+      <p className="card_message">{card.message}</p>
+      <ul className="card-item__controls">
         <li>{card.likes_count} 👍</li>
         <li onClick={() => increaseCardLikes(card)}>+1 👍</li>
-        <li className='card-item__delete' onClick={() => deleteCard(card)}>Delete</li>
+        <li className="card-item__delete" onClick={() => deleteCard(card)}>
+          Delete
+        </li>
       </ul>
     </div>
   );
