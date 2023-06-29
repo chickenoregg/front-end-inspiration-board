@@ -6,7 +6,7 @@
 body {
   margin: 3rem;
   font-family: 'Open Sans', sans-serif;
-  border: solid rgb(39, 34, 34);
+  border-radius: 20px;
   color: lawngreen;
 
 }
@@ -17,6 +17,8 @@ header{
   align-items: center;
   background-image: url('./images/background.png');
   background-size: cover;
+  border-radius: 20px;
+
 }
 
 header.h1{
@@ -27,7 +29,6 @@ h1, h2 {
   font-family:Georgia, 'Times New Roman', Times, serif;
   padding: 0.6rem 1em;
   display: inline-block;
-  color: rgb(219, 206, 206);
 }
 
 li:hover {
