@@ -76,6 +76,7 @@ function App() {
           />
         </section>
         <section>
+          <h2> Make a New Board!</h2>
           <BoardForm addBoard={postBoard} />
         </section>
         <section>
