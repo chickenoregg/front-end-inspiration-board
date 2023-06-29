@@ -10,13 +10,7 @@ const Board = ({ board, onBoardSelect }) => {
 };
 
 Board.propTypes = {
-  board: PropTypes.object(
-    PropTypes.shape({
-      board_id: PropTypes.number.isRequired,
-      owner: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    })
-  ).isRequired,
+  board: PropTypes.object.isRequired,
   onBoardSelect: PropTypes.func.isRequired
 };
 
