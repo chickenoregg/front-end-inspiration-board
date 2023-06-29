@@ -59,7 +59,7 @@ li:hover {
 
 .boards__list {
   max-height: 20rem;
-  overflow: scroll;
+  overflow-y: auto;
   margin-right: 2rem;
   /* border: black solid 1px; */
   font-family:'Courier New', Courier, monospace;
@@ -118,6 +118,10 @@ li:hover {
   font-family:'Courier New', Courier, monospace;
 
 
+}
+
+.gif_image{
+  margin-left: 45px;
 }
 .cards__container {
   display: grid;
@@ -178,12 +182,18 @@ li:hover {
 .submit_card{
   margin-top: 20px;
   padding: 10px;
-  
+  font-family:'Courier New', Courier, monospace;
+
+}
+
+.submit_board{
+  font-family:'Courier New', Courier, monospace;
 
 }
 
 .submit_board:hover{
   background-color: lawngreen;
+  
 }
 
 

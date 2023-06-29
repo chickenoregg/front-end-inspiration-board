@@ -73,7 +73,7 @@ function App() {
                 ? `${selectedBoard.title} - ${selectedBoard.owner}`
                 : "Select a board from the board list!"}
             </p>
-            <p>
+            <p className='gif_image'>
               <img src={image} alt="gif people" />
             </p>
           </section>
