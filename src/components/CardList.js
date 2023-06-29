@@ -14,6 +14,7 @@ const CardList = ({ board }) => {
       .get(`${API}/boards/${board.board_id}/cards`)
       .then((response) => {
         setCardsData(response.data);
+        console.log(response.data)
       })
       .catch((error) => {
         console.log('Error:', error);
@@ -23,7 +24,7 @@ const CardList = ({ board }) => {
 
   useEffect(() => {
     getCards();
-  });
+  }, [board]);
 
   const increaseCardLikes = (newCard) => {
     axios
