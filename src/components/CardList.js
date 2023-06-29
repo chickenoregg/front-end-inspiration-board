@@ -9,21 +9,20 @@ const CardList = ({ selectedBoardId }) => {
   useEffect(() => {
     if (selectedBoardId) {
       axios
-        .get(
-          `${process.env.REACT_APP_BACKEND_URL}/boards/${selectedBoardId}/cards`
-        )
+        .get(`${process.env.REACT_APP_BACKEND_URL}/boards/${selectedBoardId}/cards`)
         .then((response) => {
-          setCardsData(response);
+          setCardsData(response.data);
         })
         .catch((error) => {
           console.log("Error:", error);
+          alert('Unable to retrieve cards for this board.');
         });
     }
   }, [selectedBoardId]);
 
   return (
     <div>
-      <h1>CardList</h1>
+      <h2>CardList</h2>
       {cardsData.map((card) => (
         <Card
           key={card.id}
