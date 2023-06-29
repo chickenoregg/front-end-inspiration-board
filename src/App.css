@@ -1,5 +1,5 @@
 *{
-  background-color: rgb(171, 167, 167);
+  background-color: rgb(15,54,94);
 
 }
 
@@ -7,21 +7,27 @@ body {
   margin: 3rem;
   font-family: 'Open Sans', sans-serif;
   border: solid rgb(39, 34, 34);
+  color: lawngreen;
+
 }
 
 header{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('./images/background.png');
+  background-size: cover;
 }
 
+header.h1{
 
+}
 
 h1, h2 {
   font-family:Georgia, 'Times New Roman', Times, serif;
   padding: 0.6rem 1em;
   display: inline-block;
-  color: black;
+  color: rgb(219, 206, 206);
 }
 
 li:hover {
@@ -46,6 +52,7 @@ li:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background: linear-gradient(to bottom,  rgb(59, 61, 54), rgb(228, 139, 228) );
 }
 
 .new-board-form__form,
@@ -54,6 +61,14 @@ li:hover {
   flex-direction: column;
   margin-bottom: 2em;
   width: 75%;
+  border: solid black;
+  padding: 30px;
+}
+
+.new-board-form__form input,
+.new-card-form__form input{
+  color: white;
+  background-color: rgb(129, 236, 22);
 }
 
 .cards__container {
@@ -92,3 +107,5 @@ li:hover {
   font-size: 1.4rem;
   word-break: break-word;
 }
+
+
