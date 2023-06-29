@@ -37,7 +37,7 @@ const CardForm = ({ addCard }) => {
           onChange={handleChange}
         />
         <p>Preview: {cardData.message}</p>
-        <input type="submit" value="submit" />
+        <input type="submit" value="submit" className="submit_card" />
       </form>
     </section>
   );

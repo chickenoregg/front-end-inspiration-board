@@ -44,7 +44,7 @@ const BoardForm = ({ addBoard }) => {
         value={boardData.owner}
         onChange={handleChange}
       />
-      <input type="submit" value="submit"/>
+      <input className="submit_board" type="submit" value="submit"/>
       <p>Preview: {boardData.title} - {boardData.owner}</p>
     </form>
   );
