@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Card from './Card'
+import CardForm from './CardForm';
+import PropTypes from 'prop-types';
 
 const API = process.env.REACT_APP_BACKEND_URL;
 
@@ -27,7 +29,7 @@ const CardList = ({ board }) => {
           if (card.card_id !== newCard.card_id) {
             return card;
           };
-          return {...newCard, likes_count: newCard.likes_count++};
+          return {...newCard, likes_count: newCard.likes_count + 1};
         });
         setCardsData(newCardsData);
       })
@@ -81,8 +83,13 @@ const CardList = ({ board }) => {
           ))}
         </div>
       </section>
+      <CardForm addCard={postCard}/>
     </section>
   );
+};
+
+CardList.propTypes = {
+  board: PropTypes.object.isRequired
 };
 
 export default CardList;

@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import BoardList from './components/BoardList';
 import CardList from './components/CardList';
+import BoardForm from './components/BoardForm';
 
 const API = process.env.REACT_APP_BACKEND_URL;
 
-const DEFAULT_BOARD_DATA = {
+const INITIAL_BOARD_DATA = {
   board_id: null,
   owner: '',
   title: ''
@@ -14,7 +15,7 @@ const DEFAULT_BOARD_DATA = {
 
 function App() {
   const [boardsData, setBoardsData] = useState([]);
-  const [selectedBoard, setSelectedBoard] = useState(DEFAULT_BOARD_DATA);
+  const [selectedBoard, setSelectedBoard] = useState(INITIAL_BOARD_DATA);
 
   const getBoards = () => {
     axios
@@ -36,16 +37,15 @@ function App() {
     setSelectedBoard(board);
   }
 
-  const createNewBoard = (newBoard) => {
+  // Add board to form function
+  const postBoard = (newBoard) => {
     axios
-      .post(`${API}/boards`)
-      .then((response) => {
-        const boards = [...boardsData];
-        boards.push(response.data.board);
-        setBoardsData(boards);
+      .post(`${API}/boards`, newBoard)
+      .then(() => {
+        getBoards();
       })
-      .catch((error) => {
-        console.log('Error:', error);
+      .catch((err) => {
+        console.log(err);
         alert('Unable to create a new board.');
       });
   };
@@ -71,7 +71,8 @@ function App() {
             </p>
           </section>
           <section>
-            <h2>Create a New Board</h2>
+            <h2>Make a New Board!</h2>
+            <BoardForm addBoard={postBoard} />
           </section>
         </section>
         {selectedBoard.board_id ? <CardList board={selectedBoard} /> : ''}
@@ -79,7 +80,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
