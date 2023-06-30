@@ -53,6 +53,18 @@ function App() {
       });
   };
 
+  const deleteBoard = (board) => {
+    axios
+      .delete(`${API}/boards/${board.board_id}`)
+      .then(() => {
+        getBoards();
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Unable to delete the board.');
+      });
+  };
+
   return (
     <div className="App">
       <main>
@@ -63,7 +75,7 @@ function App() {
           <section>
             <h2>Boards</h2>
             <ul className="boards__list">
-                <BoardList boards={boardsData} onBoardSelect={selectBoard} />
+                <BoardList boards={boardsData} onBoardSelect={selectBoard} onDeleteBoard={deleteBoard} />
             </ul>
           </section>
           <section>

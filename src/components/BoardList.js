@@ -2,7 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import Board from './Board';
 
-const BoardList = ({ boards, onBoardSelect }) => {
+const BoardList = ({ boards, onBoardSelect, onDeleteBoard }) => {
+
+	const handleDeleteBoard = (board) => {
+		onDeleteBoard(board);
+	  };
+
 	return boards.map((board) => {
 		return (
       <li key={board.board_id}>
@@ -10,10 +15,12 @@ const BoardList = ({ boards, onBoardSelect }) => {
 					board={board}
 					className="board_item"
           onBoardSelect={onBoardSelect}
+		  onDeleteBoard={handleDeleteBoard}
         />
       </li>
 		);
 	});
+	
 };
 
 BoardList.propTypes = {
@@ -22,7 +29,8 @@ BoardList.propTypes = {
 		owner: PropTypes.string.isRequired,
 		title: PropTypes.string.isRequired
 	})),
-	onBoardSelect: PropTypes.func.isRequired
+	onBoardSelect: PropTypes.func.isRequired,
+	onDeleteBoard: PropTypes.func.isRequired
 };
 
 export default BoardList;
