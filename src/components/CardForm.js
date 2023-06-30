@@ -24,9 +24,9 @@ const CardForm = ({ addCard }) => {
   };
 
   return (
-    <section className='new-card-form__container'>
+    <section className="new-card-form__container">
       <h2>Make a New Card!</h2>
-      <form onSubmit={handleSubmit} className='new-card-form__form'>
+      <form onSubmit={handleSubmit} className="new-card-form__form">
         <label htmlFor="message">Message</label>
         <input
           required
@@ -37,7 +37,7 @@ const CardForm = ({ addCard }) => {
           onChange={handleChange}
         />
         <p>Preview: {cardData.message}</p>
-        <input type="submit" value="submit" className="submit_card" />
+        <input className="submit_card" type="submit" value="submit" />
       </form>
     </section>
   );
