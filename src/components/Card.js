@@ -7,10 +7,15 @@ const Card = ({ card, increaseCardLikes, deleteCard }) => {
       <p className="card_message">{card.message}</p>
       <ul className="card-item__controls">
         <div className="like_count">
-          <li>{card.likes_count}♥︎</li>
+          <li className="like_count_heart">
+            {card.likes_count}
+            <span>♥︎</span>
+          </li>
         </div>
         <div className="like_add">
-          <li onClick={() => increaseCardLikes(card)}>♥︎</li>
+          <li className="total_heart" onClick={() => increaseCardLikes(card)}>
+            ♥︎
+          </li>
         </div>
         <div className="delete">
           <li className="card-item__delete" onClick={() => deleteCard(card)}>

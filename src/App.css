@@ -122,6 +122,8 @@ li:hover {
 
 .gif_image{
   margin-left: 70px;
+  
+ 
 }
 .cards__container {
   display: grid;
@@ -214,3 +216,8 @@ li:hover {
 .like_add{
   font-size: xx-large;
 }
+
+.total_heart, span{
+  color:  rgb(141, 51, 238);
+}
+
