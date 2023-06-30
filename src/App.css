@@ -35,10 +35,10 @@ h1, h2 {
   
 }
 
-li:hover {
-  background-color: lawngreen;
+.board-title:hover {
   color:  rgb(132,17,252);
   border-radius: 40%;
+  cursor:pointer;
 
 }
 
@@ -47,6 +47,10 @@ li:hover {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 10px;
   
+}
+
+.board_item {
+  padding: 15px 0px;
 }
 
 

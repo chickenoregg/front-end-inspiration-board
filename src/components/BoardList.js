@@ -10,10 +10,9 @@ const BoardList = ({ boards, onBoardSelect, onDeleteBoard }) => {
 
 	return boards.map((board) => {
 		return (
-      <li key={board.board_id}>
+      <li key={board.board_id} className="board_item">
         <Board
 					board={board}
-					className="board_item"
           onBoardSelect={onBoardSelect}
 		  onDeleteBoard={handleDeleteBoard}
         />

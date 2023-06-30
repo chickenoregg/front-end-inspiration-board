@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Board = ({ board, onBoardSelect, onDeleteBoard }) => {
   return (
     <div>
-      <div onClick={() => onBoardSelect(board)}>
+      <div className="board-title" onClick={() => onBoardSelect(board)}>
         {board.title}
       </div>
       <div>

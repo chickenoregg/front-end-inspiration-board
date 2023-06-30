@@ -2,4 +2,25 @@
     border-radius: 50px;
     background: #bdd700;
     cursor: pointer;
+    font-size: 12px;
+    margin: auto;
+}
+
+.delete-board-button:hover {
+    background: #a54ed3;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.toggle-create-board {
+    margin: auto;
+    width: 65%;
+    background: #bdd700;
+}
+
+.toggle-create-board:hover {
+    background: #a54ed3;
+    cursor: pointer;
+    font-weight: bold;
 }
