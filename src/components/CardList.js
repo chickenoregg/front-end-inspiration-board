@@ -67,6 +67,21 @@ const CardList = ({ board }) => {
       });
   };
 
+  const sortCards = (sortFeature) => {
+    let sortedCards;
+
+    if (sortFeature === "id") {
+      sortedCards = [...cardsData].sort((a, b) => a.card_id - b.card_id);
+    } else if (sortFeature === "title") {
+      sortedCards = [...cardsData].sort((a, b) => a.title > b.title);
+    } else if (sortFeature === "likes") {
+      sortedCards = [...cardsData].sort((a, b) => a.likes_count - b.likes_count);
+    }
+
+    setCardsData(sortedCards);
+  };
+
+
   return (
     <section className='cards__container'>
       <section>
@@ -81,6 +96,11 @@ const CardList = ({ board }) => {
             />
           ))}
         </div>
+        <p className='sorting_buttons'>
+          <button className='sort-by-button' onClick={() => sortCards("id")}>Sort by ID</button>
+          <button className='sort-by-button' onClick={() => sortCards("title")}>Sort by Title</button>
+          <button className='sort-by-button' onClick={() => sortCards("likes")}>Sort by Likes</button>
+        </p>
       </section>
       <CardForm addCard={postCard}/>
     </section>
