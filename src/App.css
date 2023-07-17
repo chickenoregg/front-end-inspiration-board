@@ -1,7 +1,6 @@
 * {
   background-color: rgb(15,54,94);
   font-family: 'Courier New', Courier, monospace;
-
 }
 
 body {
@@ -19,40 +18,29 @@ header {
   border-radius: 20px;
 }
 
-header.h1{
-  
-
-}
-
-h2{
+h2 {
   text-align: center;
-
 }
 
 h1, h2 {
   padding: 0.6rem 1em;
-  
-  
 }
 
 .board-title:hover {
   color:  rgb(132,17,252);
   border-radius: 40%;
   cursor:pointer;
-
 }
 
 .boards__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 10px;
-  
 }
 
 .board_item {
   padding: 15px 0px;
 }
-
 
 .boards__list {
   max-height: 20rem;
@@ -65,15 +53,12 @@ h1, h2 {
   font-size: x-large;
 }
 
-
-
 .new-board-form__container,
 .new-card-form__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   /* background: linear-gradient(to top,  rgb(182, 49, 231), rgb(37, 187, 206) ); */
-
 }
 
 .new-board-form__form,
@@ -85,40 +70,32 @@ h1, h2 {
   border: solid rgb(125, 189, 23);
   padding: 30px;
   margin-left: 25px;
-  
-
 }
 
 .new-board-form__form input,
-.new-card-form__form input{
+.new-card-form__form input {
   color: white;
   background: linear-gradient(to bottom,  rgb(15,54,94), rgb(141, 51, 238));
   border: none;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-
-
 }
 
-.submit_board, .submit_card{
+.submit_board, .submit_card {
   margin-top: 20px;
   padding: 10px;
   border-radius: 40px;
-
 }
 
-.selected_board{
+.selected_board {
   text-align: center;
-
-
 }
 
-.gif_image{
-  margin-left: 70px;
-  
- 
+.gif_image {
+  margin-left: 40px;
 }
+
 .cards__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -141,8 +118,6 @@ h1, h2 {
   /* background: linear-gradient(to bottom,  rgb(163, 244, 23), rgb(191, 171, 212)); */
   background-color: rgb(152, 235, 100);
   border-radius: 10px;
-
-  
 }
 
 .card-item__controls {
@@ -152,64 +127,48 @@ h1, h2 {
   width: 100%;
   justify-content: space-evenly;
   border-radius: 20px;
-
-
 }
 
 .card-item__message {
   text-align: center;
   font-size: 1.4rem;
   word-break: break-word;
-
 }
 
-.card_message{
+.card_message {
   border-radius: 10px;
   padding: 20px;
-
 }
 
-.card-item__delete{
+.card-item__delete {
   margin-top: 5px;
-
 }
 
-.submit_card{
+.submit_card {
   margin-top: 20px;
   padding: 10px;
   font-family:'Courier New', Courier, monospace;
-
 }
 
-.submit_board{
-
-}
-
-.submit_board:hover{
+.submit_board:hover {
   background-color: lawngreen;
-  
 }
 
-
-.delete{
+.delete {
   font-size: x-large;
- 
 }
 
-.like_count, .like_add{
+.like_count, .like_add {
   margin-top: 7px;
   border-radius: 50px;
   background-color: aquamarine;
   font-size: large;
-
-
 }
 
-.like_add{
+.like_add {
   font-size: xx-large;
 }
 
-.total_heart, span{
+.total_heart, span {
   color:  rgb(141, 51, 238);
 }
-
