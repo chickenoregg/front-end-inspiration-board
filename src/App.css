@@ -54,13 +54,11 @@ h1, h2 {
 }
 
 .sort-by-button {
-  flex-direction: column;
+  display: flex;
   border-radius: 50px;
   background: #bdd700;
   cursor: pointer;
   font-size: 12px;
-  margin: auto;
-  justify-content: space-between;
 }
 
 .sort-by-button:hover {
