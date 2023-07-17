@@ -81,11 +81,15 @@ const CardList = ({ board }) => {
     setCardsData(sortedCards);
   };
 
-
   return (
     <section className='cards__container'>
       <section>
         <h2>Cards in '{board.title}'</h2>
+        <div className='sorting_buttons'>
+          <button className='sort-by-button' onClick={() => sortCards("id")}>Sort by ID</button>
+          <button className='sort-by-button' onClick={() => sortCards("message")}>Sort by Message</button>
+          <button className='sort-by-button' onClick={() => sortCards("likes")}>Sort by Likes</button>
+        </div>
         <div className='card-items__container'>
           {cardsData.map((card) => (
             <Card
@@ -96,11 +100,6 @@ const CardList = ({ board }) => {
             />
           ))}
         </div>
-        <p className='sorting_buttons'>
-          <button className='sort-by-button' onClick={() => sortCards("id")}>Sort by ID</button>
-          <button className='sort-by-button' onClick={() => sortCards("message")}>Sort by Message</button>
-          <button className='sort-by-button' onClick={() => sortCards("likes")}>Sort by Likes</button>
-        </p>
       </section>
       <CardForm addCard={postCard}/>
     </section>
