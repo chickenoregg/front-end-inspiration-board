@@ -53,6 +53,22 @@ h1, h2 {
   font-size: x-large;
 }
 
+.sort-by-button {
+  flex-direction: column;
+  border-radius: 50px;
+  background: #bdd700;
+  cursor: pointer;
+  font-size: 12px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.sort-by-button:hover {
+  background: #a54ed3;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .new-board-form__container,
 .new-card-form__container {
   display: flex;
