@@ -75,7 +75,7 @@ const CardList = ({ board }) => {
     } else if (sortFeature === "title") {
       sortedCards = [...cardsData].sort((a, b) => a.title > b.title);
     } else if (sortFeature === "likes") {
-      sortedCards = [...cardsData].sort((a, b) => a.likes_count - b.likes_count);
+      sortedCards = [...cardsData].sort((a, b) => b.likes_count - a.likes_count);
     }
 
     setCardsData(sortedCards);
