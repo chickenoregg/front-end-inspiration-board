@@ -5,7 +5,7 @@ import BoardList from './components/BoardList';
 import CardList from './components/CardList';
 import BoardForm from './components/BoardForm';
 
-// added for our gif
+// Add for our gif
 import image from './images/giphy.gif'
 
 const API = process.env.REACT_APP_BACKEND_URL;
@@ -53,6 +53,7 @@ function App() {
       });
   };
 
+  // Delete board on backend
   const deleteBoard = (board) => {
     axios
       .delete(`${API}/boards/${board.board_id}`)
