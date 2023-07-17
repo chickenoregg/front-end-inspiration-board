@@ -72,8 +72,8 @@ const CardList = ({ board }) => {
 
     if (sortFeature === "id") {
       sortedCards = [...cardsData].sort((a, b) => a.card_id - b.card_id);
-    } else if (sortFeature === "title") {
-      sortedCards = [...cardsData].sort((a, b) => a.title > b.title);
+    } else if (sortFeature === "message") {
+      sortedCards = [...cardsData].sort((a, b) => a.message > b.message);
     } else if (sortFeature === "likes") {
       sortedCards = [...cardsData].sort((a, b) => b.likes_count - a.likes_count);
     }
@@ -98,7 +98,7 @@ const CardList = ({ board }) => {
         </div>
         <p className='sorting_buttons'>
           <button className='sort-by-button' onClick={() => sortCards("id")}>Sort by ID</button>
-          <button className='sort-by-button' onClick={() => sortCards("title")}>Sort by Title</button>
+          <button className='sort-by-button' onClick={() => sortCards("message")}>Sort by Message</button>
           <button className='sort-by-button' onClick={() => sortCards("likes")}>Sort by Likes</button>
         </p>
       </section>
