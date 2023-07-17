@@ -9,7 +9,7 @@ const Board = ({ board, onBoardSelect, onDeleteBoard }) => {
         {board.title}
       </div>
       <div>
-      <button class="delete-board-button" onClick={() => onDeleteBoard(board)}>Delete Board</button>
+      <button className="delete-board-button" onClick={() => onDeleteBoard(board)}>Delete Board</button>
       </div>
     </div>
   );
