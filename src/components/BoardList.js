@@ -3,23 +3,21 @@ import PropTypes from 'prop-types';
 import Board from './Board';
 
 const BoardList = ({ boards, onBoardSelect, onDeleteBoard }) => {
-
 	const handleDeleteBoard = (board) => {
 		onDeleteBoard(board);
-	  };
+	};
 
 	return boards.map((board) => {
 		return (
       <li key={board.board_id} className="board_item">
         <Board
-					board={board}
+          board={board}
           onBoardSelect={onBoardSelect}
-		  onDeleteBoard={handleDeleteBoard}
+          onDeleteBoard={handleDeleteBoard}
         />
       </li>
 		);
 	});
-	
 };
 
 BoardList.propTypes = {
