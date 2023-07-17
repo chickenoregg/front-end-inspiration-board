@@ -1,4 +1,4 @@
-.delete-board-button {
+.delete-board-button, .sort-by-button {
     border-radius: 50px;
     background: #bdd700;
     cursor: pointer;
@@ -6,7 +6,7 @@
     margin: auto;
 }
 
-.delete-board-button:hover {
+.delete-board-button:hover, .sort-by-button:hover {
     background: #a54ed3;
     cursor: pointer;
     font-weight: bold;
