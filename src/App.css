@@ -53,12 +53,17 @@ h1, h2 {
   font-size: x-large;
 }
 
-.sort-by-button {
+.sorting_buttons {
   display: flex;
+  justify-content: center;
+}
+
+.sort-by-button {
   border-radius: 50px;
   background: #bdd700;
   cursor: pointer;
   font-size: 12px;
+  margin: 1%;
 }
 
 .sort-by-button:hover {
