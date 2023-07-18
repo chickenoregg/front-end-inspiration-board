@@ -73,7 +73,7 @@ const CardList = ({ board }) => {
     if (sortFeature === "id") {
       sortedCards = [...cardsData].sort((a, b) => a.card_id - b.card_id);
     } else if (sortFeature === "message") {
-      sortedCards = [...cardsData].sort((a, b) => a.message > b.message);
+      sortedCards = [...cardsData].sort((a, b) => a.message.localeCompare(b.message));
     } else if (sortFeature === "likes") {
       sortedCards = [...cardsData].sort((a, b) => b.likes_count - a.likes_count);
     }
